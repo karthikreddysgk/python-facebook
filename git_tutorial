@@ -1,0 +1,47 @@
+git is version control system
+
+-install git
+yum install git
+
+-configure
+git config --global user.name "Your Name Here"
+git config --global user.email "your_email@youremail.com"
+
+-Creating Your Local Repository
+mkdir ~/MyProject
+cd ~/MyProject
+
+-initialize the local repo
+git init
+
+-check the status
+git status
+
+-git recognizing the files in local git repository
+git add Readme.txt
+
+-commiting the added ones
+git commit -m “Add Readme.txt”
+
+-Connect Your Local Repository To Your GitHub Repository before pushing
+git remote add origin https://github.com/us
+
+-list of all the remote origins your local repository knows about
+git remote -v
+
+-pushing the local repo to remote repo's (origin) master branch
+git push origin master
+
+-resolving the errors while pushing
+https method is not allowed by git instead we need to use ssh url
+edit .git/config file under your repo directory
+replace https://..... url with ssh url
+cd ~/.ssh
+cat id_rsa.pub
+copy the key into the SSH settings of the Github website
+
+*source*
+readwrite.com
+
+
+
